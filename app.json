@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hrishi85.europowerapp"
     },
     "splash": {
       "image": "./assets/images/splash-screen.png",
@@ -55,7 +56,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "cce23901-57c7-4809-9539-4f611dbc225d"
+        "projectId": "cf9b7c60-1839-4267-bd32-91e120ae0cfa"
       }
     },
     "owner": "hrishi85"
