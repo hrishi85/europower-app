@@ -1,45 +1,37 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
+import { Tabs, useRouter } from 'expo-router';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+function CustomTabs() {
+	const router = useRouter();
+	return (
+		<View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', backgroundColor: '#25a6df', paddingVertical: 20 }}>
+			<TouchableOpacity style={{ flex: 1, flexDirection: 'column', alignItems: 'center', gap: 4 }} onPress={() => router.push('/home')}>
+				<Image source={require("@/assets/images/icns/home-white.png")} style={{ width: 26, height: 24 }} />
+				<Text style={{ color: "white", fontSize: 14, fontWeight: "bold" }}>Home</Text>
+			</TouchableOpacity>
+			<TouchableOpacity style={{ flex: 1, flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+				<Image source={require("@/assets/images/icns/bookings-white.png")} style={{ width: 28.5, height: 24 }} />
+				<Text style={{ color: "white", fontSize: 14, fontWeight: "bold" }}>Bookings</Text>
+			</TouchableOpacity>
+			<TouchableOpacity style={{ flex: 1, flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+				<Image source={require("@/assets/images/icns/reviews-white.png")} style={{ width: 26.4, height: 24 }} />
+				<Text style={{ color: "white", fontSize: 14, fontWeight: "bold" }}>Reviews</Text>
+			</TouchableOpacity>
+			<TouchableOpacity style={{ flex: 1, flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+				<Image source={require("@/assets/images/icns/profile-white.png")} style={{ width: 24, height: 24 }} />
+				<Text style={{ color: "white", fontSize: 14, fontWeight: "bold" }}>Profile</Text>
+			</TouchableOpacity>
+		</View>
+	);
+}
+
+
+
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
-  );
+	return (
+		<>
+			<Tabs screenOptions={{ headerShown: false }} tabBar={() => <CustomTabs />} />
+		</>
+	);
 }
