@@ -51,7 +51,7 @@ export default function LoginScreen() {
 						<View style={{ width: "100%", backgroundColor: "#293d80", paddingHorizontal: 40, paddingVertical: 50, borderRadius: 10, position: "relative" }}>
 							<Image source={require("@/assets/images/login/yellow-gear-small.png")} style={{ width: 48, height: "90%", position: "absolute", right: 20, bottom: -110 }} resizeMode="contain" />
 							<Image source={require("@/assets/images/login/yellow-gear-big.png")} style={{ width: 72, height: "90%", position: "absolute", left: -20, bottom: -160 }} resizeMode="contain" />
-							<Formik initialValues={{ userName: '9766325958', password: '12345' }} validationSchema={validationSchema} onSubmit={handleSubmit}>
+							<Formik initialValues={{ userName: '', password: '' }} validationSchema={validationSchema} onSubmit={handleSubmit}>
 								{({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
 									<>
 										{error && <Text style={styles.error}>{error}</Text>}
