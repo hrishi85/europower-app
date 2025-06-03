@@ -18,6 +18,11 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
+		"splash": {
+			"image": "./assets/images/splash_screen.png",
+			"resizeMode": "cover",
+			"backgroundColor": "#ffffff"
+		},
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
