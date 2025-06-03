@@ -39,7 +39,7 @@
 					"resizeMode": "cover", // or "contain"
 					"dark": {
 						"image": "./assets/images/splash_screen.png",
-						"backgroundColor": "#ffffff"
+						"backgroundColor": "#000000"
 					}
 				}
 			],
