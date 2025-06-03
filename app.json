@@ -13,6 +13,9 @@
       "bundleIdentifier": "com.hrishi85.europowerapp"
     },
     "splash": {
+      "image": "./assets/images/splash_screen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
     },
     "android": {
       "adaptiveIcon": {
@@ -39,6 +42,9 @@
       [
         "expo-splash-screen",
         {
+          "image": "./assets/images/splash_screen.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#ffffff"
         }
       ],
       "expo-font",
