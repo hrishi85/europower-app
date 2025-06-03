@@ -122,6 +122,7 @@ export default function Assigned() {
 							</View>
 							<View style={{ width: "100%", backgroundColor: "#fff", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 16, borderRadius: 5, marginBottom: 8 }}>
 								<Text style={{ fontWeight: "bold" }}>Complaint Details</Text>
+								<Text style={{ fontWeight: "bold", color: "#26dd37" }}>See more...</Text>
 							</View>
 						</View>
 					);
