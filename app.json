@@ -14,7 +14,7 @@
 		},
 		"splash": {
 			"image": "./assets/images/splash_screen.png",
-			"resizeMode": "contain",
+			"resizeMode": "cover",
 			"backgroundColor": "#25292e"
 		},
 		"android": {
@@ -45,7 +45,7 @@
 		"extra": {
 			"router": {},
 			"eas": {
-			"projectId": "cf9b7c60-1839-4267-bd32-91e120ae0cfa"
+				"projectId": "cf9b7c60-1839-4267-bd32-91e120ae0cfa"
 			}
 		},
 		"owner": "hrishi85"
