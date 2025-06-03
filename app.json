@@ -12,11 +12,7 @@
 			"supportsTablet": true,
 			"bundleIdentifier": "com.hrishi85.europowerapp"
 		},
-		"splash": {
-			"image": "./assets/images/splash_screen.png",
-			"resizeMode": "cover",
-			"backgroundColor": "#ffffff"
-		},
+		"splash": {},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
@@ -45,7 +41,7 @@
 		"extra": {
 			"router": {},
 			"eas": {
-				"projectId": "cf9b7c60-1839-4267-bd32-91e120ae0cfa"
+			"projectId": "cf9b7c60-1839-4267-bd32-91e120ae0cfa"
 			}
 		},
 		"owner": "hrishi85"
