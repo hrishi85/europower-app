@@ -70,7 +70,7 @@ export default function HomeScreen() {
     return (
 		<View style={{ flex: 1 }}>
 			<View style={{ height: 80, marginTop: 20, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }}>
-				<View style={{ width: "100%", height: 40, backgroundColor: "#b4272b", borderRadius: 20 }}></View>
+				{/* <View style={{ width: "100%", height: 40, backgroundColor: "#b4272b", borderRadius: 20 }}></View> */}
 			</View>
 			<View style={{ width: "100%", flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "space-around", }} >
 
@@ -122,8 +122,14 @@ export default function HomeScreen() {
 					</View>
 				</TouchableOpacity>
 			</View>
-			<View style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-				<Image source={require("@/assets/images/home/character.png")} style={{ width: "90%", height: "90%" }} resizeMode="contain" />
+			<View style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end", position: "relative" }}>
+				<TouchableOpacity style={{ width: "auto", paddingLeft: 10, height: 40, backgroundColor: "#b4daf0", position: "absolute", left: 0, top: 50, zIndex: 20, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-end" }}>
+					<Text style={{ paddingHorizontal: 10, fontSize: 12, lineHeight: 12 }}>Start where{'\n'}you left</Text>
+					<View style={{ width: 40, height: 40, backgroundColor: "#293d80", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+						<Image source={require("@/assets/images/icns/arrow-restart-white.png")} style={{ width: 16, height: 16 }} resizeMode="contain" />
+					</View>
+				</TouchableOpacity>
+				<Image source={require("@/assets/images/home/character.png")} style={{ width: "90%", height: "90%", position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%, 0)" }} resizeMode="contain" />
 			</View>
 		</View>
     );

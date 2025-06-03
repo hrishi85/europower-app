@@ -4,16 +4,7 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { Link, useRouter } from 'expo-router';
 import { Formik } from 'formik';
 import React, { useEffect, useRef, useState } from 'react';
-import {
-	Image,
-	KeyboardAvoidingView,
-	Platform,
-	StyleSheet,
-	Text,
-	TextInput,
-	TouchableOpacity,
-	View,
-} from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, } from 'react-native';
 import * as Yup from 'yup';
 
 export default function LoginScreen() {
@@ -44,46 +35,23 @@ export default function LoginScreen() {
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.container}>
 			<BackgroundWrapper>
 				<View style={{flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-					<View style={{flex: 2, width: "100%", justifyContent: "flex-end", alignItems: "center" }}>
-						<Image source={require("@/assets/images/europower-logo.png")} style={{ width: 200, height: "90%" }} resizeMode="contain" />
+					<View style={{flex: 2, width: "100%", justifyContent: "flex-end", alignItems: "center", paddingBottom: 20 }}>
+						<Image source={require("@/assets/images/europower-logo.png")} style={{ width: 140, height: "90%" }} resizeMode="contain" />
 					</View>
 					<View style={{ flex: 2, width: "100%", height: 256, justifyContent: "center", alignItems: "center", paddingHorizontal: 20 }}>
-						<View style={{ width: "100%", backgroundColor: "#293d80", paddingHorizontal: 40, paddingVertical: 50, borderRadius: 10, position: "relative" }}>
-							<Image source={require("@/assets/images/login/yellow-gear-small.png")} style={{ width: 48, height: "90%", position: "absolute", right: 20, bottom: -110 }} resizeMode="contain" />
-							<Image source={require("@/assets/images/login/yellow-gear-big.png")} style={{ width: 72, height: "90%", position: "absolute", left: -20, bottom: -160 }} resizeMode="contain" />
+						<View style={{ width: "100%", backgroundColor: "#293d80", paddingHorizontal: 20, paddingVertical: 20, borderRadius: 30, position: "relative" }}>
 							<Formik initialValues={{ userName: '', password: '' }} validationSchema={validationSchema} onSubmit={handleSubmit}>
 								{({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
 									<>
 										{error && <Text style={styles.error}>{error}</Text>}
-										<TextInput
-											style={styles.input}
-											placeholder="Username"
-											autoCapitalize="none"
-											returnKeyType="next"
-											onChangeText={handleChange('userName')}
-											onBlur={handleBlur('userName')}
-											value={values.userName}
-											onSubmitEditing={() => passwordInputRef.current?.focus()}
-										/>
+										<TextInput style={styles.input} placeholder="Username" autoCapitalize="none" returnKeyType="next" onChangeText={handleChange('userName')} onBlur={handleBlur('userName')} value={values.userName} onSubmitEditing={() => passwordInputRef.current?.focus()} />
 										{touched.userName && errors.userName && (
 											<Text style={styles.error}>{errors.userName}</Text>
 										)}
 
 										<View style={styles.passwordContainer}>
-											<TextInput
-												ref={passwordInputRef}
-												style={styles.input}
-												placeholder="Password"
-												secureTextEntry={!showPassword}
-												onChangeText={handleChange('password')}
-												onBlur={handleBlur('password')}
-												value={values.password}
-												returnKeyType="done"
-											/>
-											<TouchableOpacity
-												onPress={() => setShowPassword((prev) => !prev)}
-												style={styles.togglePassword}
-											>
+											<TextInput ref={passwordInputRef} style={styles.input} placeholder="Password" secureTextEntry={!showPassword} onChangeText={handleChange('password')} onBlur={handleBlur('password')} value={values.password} returnKeyType="done" />
+											<TouchableOpacity onPress={() => setShowPassword((prev) => !prev)} style={styles.togglePassword} >
 												<Text style={styles.togglePasswordText}>
 													{
 														showPassword ? 
@@ -103,16 +71,19 @@ export default function LoginScreen() {
 												{loading ? 'Logging in...' : 'Login'}
 											</Text>
 										</TouchableOpacity>
-										<Link href="/forgot-password" style={{ marginTop: 30, color: '#fbce3c', textAlign: 'center' }}>
+										<Link href="/forgot-password" style={{ marginTop: 15, color: '#c1e0f6', paddingLeft: 25 }}>
 											Forgot Password?
 										</Link>
+										<Text style={{ color: '#c1e0f6', paddingLeft: 25, marginTop: 15, fontSize: 12 }}>
+											By creating an account you agree to Europpower's Terms of Services and Privacy Policy
+										</Text>
 									</>
 								)}
 							</Formik>
 						</View>
 					</View>
-					<View style={{ flex: 3, width: "100%", justifyContent: "flex-end", alignItems: "center" }}>
-						<Image source={require("@/assets/images/login/illustration.png")} style={{ width: "90%", height: undefined, aspectRatio: 1, marginTop: 'auto' }} resizeMode="contain" />
+					<View style={{ flex: 3, width: "100%", justifyContent: "flex-end", alignItems: "center", position: "relative"}}>
+						<Image source={require("@/assets/images/login/illustration.png")} style={{ width: "auto", height: "100%", aspectRatio: 1, position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%, 0)" }} resizeMode="contain" />
 					</View>
 				</View>
 			</BackgroundWrapper>
@@ -162,14 +133,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#fbce3c',
 		height: 40,
         borderRadius: 20,
-        alignItems: 'center',
+		paddingHorizontal: 20,
+        // alignItems: 'center',
     },
     buttonDisabled: {
         opacity: 0.6,
     },
     buttonText: {
         fontSize: 16,
-        fontWeight: '600',
+        // fontWeight: '600',
 		lineHeight: 40,
     },
 });

@@ -93,7 +93,7 @@ export default function Assigned() {
 		<View style={{ flex: 1 }}>
 			<View style={{ height: 80, marginTop: 20, display: "flex", flexDirection: "row", gap: 12, alignItems: "center", justifyContent: "space-between", paddingHorizontal: 16 }}>
 				<View style={{ flex: 1, height: 40, backgroundColor: "#d1d3d4", borderRadius: 20 }}></View>
-				<View style={{ flex: 1, height: 40, backgroundColor: "#b4272b", borderRadius: 20 }}></View>
+				{/* <View style={{ flex: 1, height: 40, backgroundColor: "#b4272b", borderRadius: 20 }}></View> */}
 			</View>
 
 			{/* FlatList inserted below UI */}

@@ -2,16 +2,7 @@ import BackgroundWrapper from '@/components/BackgroundWrapper';
 import { Link, useRouter } from 'expo-router';
 import { Formik } from 'formik';
 import React from 'react';
-import {
-	Image,
-	KeyboardAvoidingView,
-	Platform,
-	StyleSheet,
-	Text,
-	TextInput,
-	TouchableOpacity,
-	View,
-} from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View, } from 'react-native';
 import * as Yup from 'yup';
 
 export default function ForgotPasswordScreen() {
@@ -31,25 +22,15 @@ export default function ForgotPasswordScreen() {
             <BackgroundWrapper>
                 <View style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
                     <View style={{ flex: 2, width: "100%", justifyContent: "flex-end", alignItems: "center" }}>
-                        <Image source={require("@/assets/images/europower-logo.png")} style={{ width: 256, height: "90%" }} resizeMode="contain" />
+                        <Image source={require("@/assets/images/europower-logo.png")} style={{ width: 140, height: "90%" }} resizeMode="contain" />
                     </View>
                     <View style={{ flex: 2, width: "100%", height: 256, justifyContent: "center", alignItems: "center", paddingHorizontal: 20 }}>
-                        <View style={{ width: "100%", backgroundColor: "#293d80", paddingHorizontal: 40, paddingVertical: 50, borderRadius: 10, position: "relative" }}>
-                            <Image source={require("@/assets/images/login/yellow-gear-small.png")} style={{ width: 48, height: "90%", position: "absolute", right: 20, bottom: -110 }} resizeMode="contain" />
-                            <Image source={require("@/assets/images/login/yellow-gear-big.png")} style={{ width: 72, height: "90%", position: "absolute", left: -20, bottom: -160 }} resizeMode="contain" />
+                        <View style={{ width: "100%", backgroundColor: "#293d80", paddingHorizontal: 20, paddingVertical: 20, borderRadius: 10, position: "relative" }}>
 
                             <Formik initialValues={{ email: '' }} validationSchema={validationSchema} onSubmit={handleSubmit}>
                                 {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
                                     <>
-                                        <TextInput
-                                            style={styles.input}
-                                            placeholder="Enter your email"
-                                            autoCapitalize="none"
-                                            keyboardType="email-address"
-                                            onChangeText={handleChange('email')}
-                                            onBlur={handleBlur('email')}
-                                            value={values.email}
-                                        />
+                                        <TextInput style={styles.input} placeholder="Enter your email" autoCapitalize="none" keyboardType="email-address" onChangeText={handleChange('email')} onBlur={handleBlur('email')} value={values.email} />
                                         {touched.email && errors.email && (
                                             <Text style={styles.error}>{errors.email}</Text>
                                         )}
@@ -57,7 +38,7 @@ export default function ForgotPasswordScreen() {
                                         <TouchableOpacity onPress={() => handleSubmit()} style={styles.button}>
                                             <Text style={styles.buttonText}>Send Reset Link</Text>
                                         </TouchableOpacity>
-										<Link href="/" style={{ marginTop: 30, color: '#fbce3c', textAlign: 'center' }}>
+										<Link href="/" style={{ marginTop: 15, color: '#c1e0f6', paddingLeft: 25 }}>
 											Back to Login
 										</Link>
                                     </>
@@ -66,7 +47,7 @@ export default function ForgotPasswordScreen() {
                         </View>
                     </View>
                     <View style={{ flex: 3, width: "100%", justifyContent: "flex-end", alignItems: "center" }}>
-                        <Image source={require("@/assets/images/login/illustration.png")} style={{ width: "90%", height: "90%" }} resizeMode="contain" />
+                        {/* <Image source={require("@/assets/images/login/illustration.png")} style={{ width: "90%", height: "90%" }} resizeMode="contain" /> */}
                     </View>
                 </View>
             </BackgroundWrapper>
@@ -97,11 +78,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fbce3c',
         height: 40,
         borderRadius: 20,
-        alignItems: 'center',
+		paddingHorizontal: 20,
     },
     buttonText: {
         fontSize: 16,
-        fontWeight: '600',
         lineHeight: 40,
     },
 });

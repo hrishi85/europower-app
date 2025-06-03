@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import 'react-native-gesture-handler';
 import 'react-native-reanimated';
 import { Provider } from 'react-redux';
@@ -28,9 +29,18 @@ export default function RootLayout() {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <Stack screenOptions={{ headerShown: false }} />
-                <StatusBar style="auto" />
+				<SafeAreaView style={styles.container}>
+					<Stack screenOptions={{ headerShown: false }} />
+					<StatusBar style="auto" />
+				</SafeAreaView>
             </PersistGate>
         </Provider>
     );
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#fff',
+	},
+});
