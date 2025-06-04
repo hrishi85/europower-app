@@ -15,7 +15,7 @@
 		"splash": {
 			"image": "./assets/images/splash_screen.png",
 			"resizeMode": "cover",
-			"backgroundColor": "#25292e"
+			"backgroundColor": "#ffffff"
 		},
 		"android": {
 			"adaptiveIcon": {
@@ -35,6 +35,15 @@
 			"favicon": "./assets/images/favicon.png"
 		},
 		"plugins": [
+			[
+				"expo-splash-screen",
+				{
+					"backgroundColor": "#ffffff",
+					"image": "./assets/images/splash_screen.png",
+					"resizeMode": "cover",
+					"imageWidth": 8000
+				}
+			],
 			"expo-router",
 			"expo-font",
 			"expo-secure-store"
