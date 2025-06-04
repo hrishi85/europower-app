@@ -14,15 +14,10 @@
 		},
 		"splash": {
 			"backgroundColor": "#ffffff",
-			"image": "./assets/images/splash.png",
-			"resizeMode": "cover"
+			"resizeMode": "contain",
+			"image": "./assets/images/transparent.png"
 		},
 		"android": {
-			"splash": {
-				"backgroundColor": "#ffffff",
-				"image": "./assets/images/transparent.png",
-				"resizeMode": "contain"
-			},
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
