@@ -18,6 +18,11 @@
 			"resizeMode": "cover"
 		},
 		"android": {
+			"splash": {
+				"backgroundColor": "#ffffff",
+				"image": "./assets/images/splash.png",
+				"resizeMode": "native"
+			},
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
@@ -40,7 +45,7 @@
 				{
 					"backgroundColor": "#ffffff",
 					"image": "./assets/images/splash.png",
-					"resizeMode": "fill"
+					"resizeMode": "cover"
 				}
 			],
 			"expo-router",
