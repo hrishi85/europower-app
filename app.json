@@ -12,11 +12,7 @@
 			"supportsTablet": true,
 			"bundleIdentifier": "com.hrishi85.europowerapp"
 		},
-		"splash": {
-			"image": "./assets/images/splash_screen.png",
-			"resizeMode": "cover",
-			"backgroundColor": "#ffffff"
-		},
+		"splash": {},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
@@ -36,14 +32,6 @@
 		},
 		"plugins": [
 			"expo-router",
-			[
-				"expo-splash-screen",
-				{
-					"image": "./assets/images/splash_screen.png",
-					"resizeMode": "cover",
-					"backgroundColor": "#ffffff"
-				}
-			],
 			"expo-font",
 			"expo-secure-store"
 		],
