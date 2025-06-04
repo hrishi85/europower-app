@@ -20,13 +20,8 @@
 		"android": {
 			"splash": {
 				"backgroundColor": "#ffffff",
-				"image": "./assets/images/splash.png",
-				"resizeMode": "cover",
-				"mdpi": "./assets/images/splash-mdpi.png",
-				"hdpi": "./assets/images/splash-hdpi.png",
-				"xhdpi": "./assets/images/splash-xhdpi.png",
-				"xxhdpi": "./assets/images/splash-xxhdpi.png",
-				"xxxhdpi": "./assets/images/splash-xxxhdpi.png"
+				"image": "./assets/images/transparent.png",
+				"resizeMode": "contain"
 			},
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
@@ -49,13 +44,8 @@
 				"expo-splash-screen",
 				{
 					"backgroundColor": "#ffffff",
-					"image": "./assets/images/splash.png",
-					"resizeMode": "cover",
-					"mdpi": "./assets/images/splash-mdpi.png",
-					"hdpi": "./assets/images/splash-hdpi.png",
-					"xhdpi": "./assets/images/splash-xhdpi.png",
-					"xxhdpi": "./assets/images/splash-xxhdpi.png",
-					"xxxhdpi": "./assets/images/splash-xxxhdpi.png"
+					"image": "./assets/images/transparent.png",
+					"resizeMode": "contain"
 				}
 			],
 			"expo-router",
