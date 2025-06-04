@@ -1,6 +1,6 @@
 {
 	"expo": {
-		"name": "europower-app",
+		"name": "Europower",
 		"slug": "europower",
 		"version": "1.0.0",
 		"orientation": "portrait",
@@ -35,16 +35,15 @@
 			"favicon": "./assets/images/favicon.png"
 		},
 		"plugins": [
+			"expo-router",
 			[
 				"expo-splash-screen",
 				{
-					"backgroundColor": "#ffffff",
 					"image": "./assets/images/splash_screen.png",
 					"resizeMode": "cover",
-					"imageWidth": 8000
+					"backgroundColor": "#ffffff"
 				}
 			],
-			"expo-router",
 			"expo-font",
 			"expo-secure-store"
 		],
