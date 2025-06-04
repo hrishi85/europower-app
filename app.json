@@ -21,7 +21,12 @@
 			"splash": {
 				"backgroundColor": "#ffffff",
 				"image": "./assets/images/splash.png",
-				"resizeMode": "native"
+				"resizeMode": "cover",
+				"mdpi": "./assets/images/splash-mdpi.png",
+				"hdpi": "./assets/images/splash-hdpi.png",
+				"xhdpi": "./assets/images/splash-xhdpi.png",
+				"xxhdpi": "./assets/images/splash-xxhdpi.png",
+				"xxxhdpi": "./assets/images/splash-xxxhdpi.png"
 			},
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
@@ -45,7 +50,12 @@
 				{
 					"backgroundColor": "#ffffff",
 					"image": "./assets/images/splash.png",
-					"resizeMode": "cover"
+					"resizeMode": "cover",
+					"mdpi": "./assets/images/splash-mdpi.png",
+					"hdpi": "./assets/images/splash-hdpi.png",
+					"xhdpi": "./assets/images/splash-xhdpi.png",
+					"xxhdpi": "./assets/images/splash-xxhdpi.png",
+					"xxxhdpi": "./assets/images/splash-xxxhdpi.png"
 				}
 			],
 			"expo-router",
