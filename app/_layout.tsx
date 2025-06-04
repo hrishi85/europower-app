@@ -24,7 +24,7 @@ export default function RootLayout() {
 	useEffect(() => {
 		const prepareApp = async () => {
 			// Simulate loading or any async setup here
-			await new Promise(resolve => setTimeout(resolve, 2000));
+			await new Promise(resolve => setTimeout(resolve, 12000));
 
 			// Wait until fonts are loaded
 			if (fontsLoaded) {
